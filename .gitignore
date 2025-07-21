@@ -1,0 +1,13 @@
+#Old data
+# This file is used to ignore files and directories that should not be tracked by Git.
+
+goodreads_data_dictionary.csv
+goodreads_reviews.csv
+goodreads_works.csv
+
+#Clean data
+cleaned_goodreads_works.csv
+cleaned_goodreads_reviews.csv
+
+# python libaries
+requirements.txt
