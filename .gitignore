@@ -13,5 +13,9 @@ cleaned_goodreads_reviews.csv
 readtest.md
 Maven_Book
 Tips_Dashboard
+
+#environment
+myenv
+
 # python libaries
 requirements.txt
