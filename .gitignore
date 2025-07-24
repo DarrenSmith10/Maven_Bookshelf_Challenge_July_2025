@@ -9,5 +9,9 @@ goodreads_works.csv
 cleaned_goodreads_works.csv
 cleaned_goodreads_reviews.csv
 
+#TipsAndReadme
+readtest.md
+Maven_Book
+Tips_Dashboard
 # python libaries
 requirements.txt
