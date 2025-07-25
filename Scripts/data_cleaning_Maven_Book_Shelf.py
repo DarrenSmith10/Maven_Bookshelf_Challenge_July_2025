@@ -22,7 +22,7 @@ def process_data_in_chunks(file_path, chunk_size=1000):
         yield chunk.dropna().drop_duplicates()
 # Example usage
 if __name__ == "__main__":
-    file_path = 'goodreads_works.csv'  # Replace with your actual file path
+    file_path = './Original_Data/goodreads_works.csv'  # Replace with your actual file path
     for cleaned_chunk in process_data_in_chunks(file_path):
         # Here you can process each cleaned chunk further or save it
         print("Processed a chunk of data.")
@@ -45,8 +45,8 @@ def clean_data(file_path, output_path):
     print("Data cleaned and saved to", output_path)
 # Example usage
 if __name__ == "__main__":
-    file_path = 'goodreads_works.csv'  # Replace with your actual file path
-    output_path = 'cleaned_goodreads_works.csv'  # Path to save the cleaned data
+    file_path = './Original_Data/goodreads_works.csv'  # Replace with your actual file path
+    output_path = './Clean_Data/cleaned_goodreads_works.csv'  # Path to save the cleaned data
     clean_data(file_path, output_path)
 # This code cleans the data by removing rows with missing values and duplicates.
 # It saves the cleaned data to a new CSV file.
