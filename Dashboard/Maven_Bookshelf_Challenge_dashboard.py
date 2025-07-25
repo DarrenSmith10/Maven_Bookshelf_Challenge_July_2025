@@ -9,12 +9,14 @@ from pathlib import Path
 
 from pathlib import Path
 
+from pathlib import Path
+
 BASE = Path(__file__).parent  # folder where app.py lives
 data_dir = BASE / "Clean_Data"
+works_path = data_dir / "cleaned_goodreads_works.csv"
+reviews_path = data_dir / "Final_cleaned_goodreads_reviews.csv"
 
-# Check if the files exist
-works_path = '../Clean_Data/cleaned_goodreads_works.csv'
-reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
+
 
 if not os.path.exists(works_path):
 	print(f"File not found: {works_path}")
