@@ -6,7 +6,6 @@ goodreads_reviews.csv
 goodreads_works.csv
 
 #Clean data
-cleaned_goodreads_works.csv
 cleaned_goodreads_reviews.csv
 
 #TipsAndReadme

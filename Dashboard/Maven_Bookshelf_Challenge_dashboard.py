@@ -6,7 +6,7 @@ import os
 
 # Load your cleaned data (update filename if needed)
 works_path = '../Clean_Data/cleaned_goodreads_works.csv'
-reviews_path = '../Clean_Data/cleaned_goodreads_reviews.csv'
+reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
 
 if not os.path.exists(works_path):
 	print(f"File not found: {works_path}")
