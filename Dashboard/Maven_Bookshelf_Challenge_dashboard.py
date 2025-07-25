@@ -12,16 +12,6 @@ from pathlib import Path
 BASE = Path(__file__).parent  # folder where app.py lives
 data_dir = BASE / "Clean_Data"
 
-
-# # Load your cleaned data (update filename if needed)
-# works_path = '../Clean_Data/cleaned_goodreads_works.csv'
-# reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
-
-
-works_path = data_dir / "cleaned_goodreads_works.csv"
-reviews_path = data_dir / "Final_cleaned_goodreads_reviews.csv"
-
-
 # Check if the files exist
 works_path = '../Clean_Data/cleaned_goodreads_works.csv'
 reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
@@ -90,3 +80,10 @@ st.dataframe(recommend_books('fantasy', 5))
 genre_counts = works['genres'].value_counts()
 st.subheader("Number of Books per Genre")
 st.bar_chart(genre_counts)
+
+
+# # Load your cleaned data (update filename if needed)
+# works_path = '../Clean_Data/cleaned_goodreads_works.csv'
+# reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
+# works_path = data_dir / "cleaned_goodreads_works.csv"
+# reviews_path = data_dir / "Final_cleaned_goodreads_reviews.csv"
