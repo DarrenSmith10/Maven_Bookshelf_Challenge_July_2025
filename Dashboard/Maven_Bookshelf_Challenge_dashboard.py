@@ -4,7 +4,26 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
-# Load your cleaned data (update filename if needed)
+from pathlib import Path
+# Ensure the necessary directories exist
+
+from pathlib import Path
+
+BASE = Path(__file__).parent  # folder where app.py lives
+data_dir = BASE / "Clean_Data"
+
+
+# # Load your cleaned data (update filename if needed)
+# works_path = '../Clean_Data/cleaned_goodreads_works.csv'
+# reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
+
+
+works_path = data_dir / "cleaned_goodreads_works.csv"
+reviews_path = data_dir / "Final_cleaned_goodreads_reviews.csv"
+df_works = pd.read_csv(works_path)
+df_reviews = pd.read_csv(reviews_path)
+
+# Check if the files exist
 works_path = '../Clean_Data/cleaned_goodreads_works.csv'
 reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
 
