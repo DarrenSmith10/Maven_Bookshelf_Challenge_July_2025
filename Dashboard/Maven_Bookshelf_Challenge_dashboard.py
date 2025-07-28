@@ -34,18 +34,57 @@ else:
 
 
 # Streamlit background colour
+import streamlit as st
 
-page_bg_img = """
+import streamlit as st
+
+css_global = """
 <style>
-body {
-    background-color: #e6f2ff;  /* Light blue background */
-    font-family: 'Arial', sans-serif;
+.stApp {
+  background-image: linear-gradient(to bottom right, #010101, #393836);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
+.stButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.stButton:hover {
+  background-color: #45a049;
+}
+.stElementContainer {
+  margin: 10px 0;
+  color: bisque;
+}
+
+[data-testid="stHeader"], [data-testid="stToolbar"] {
+  background: rgba(0,0,0,0);
+}
+
 </style>
 """
-st.markdown(page_bg_img, unsafe_allow_html=True)
+st.markdown(css_global, unsafe_allow_html=True)
 
-st.title("Maven Bookshelf Dashboard")
+# css_container = """
+# <style>
+# .st-key-my_blue_container {
+#   background-color: rgba(100, 100, 255, 0.2);
+#   padding: 1rem;
+#   border-radius: 8px;
+# }
+# </style>
+# """
+# st.markdown(css_container, unsafe_allow_html=True)
+
+# with st.container(key="my_blue_container"):
+#     st.write("This container has custom styling")
+
+
 
 #------ Cleaning the Genre # column and preparing the dataset for visualization ----
 #Clean the Genres column
@@ -84,7 +123,8 @@ sns.barplot(
     x='avg_rating',
     y='original_title',
     data=top_books,
-    palette='viridis'
+    palette='viridis',
+   
 )
 ax_bar.set_xlabel('Average Rating')
 ax_bar.set_ylabel('Book Title')

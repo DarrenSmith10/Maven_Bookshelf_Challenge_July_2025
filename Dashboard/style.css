@@ -1,0 +1,22 @@
+/* style.css */
+.stApp {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.stButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.stButton:hover {
+  background-color: #45a049;
+}
+.stElementContainer {
+  margin: 10px 0;
+  color: bisque;
+}
