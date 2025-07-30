@@ -15,6 +15,19 @@ from pathlib import Path
 # works_path = '../Clean_Data/cleaned_goodreads_works.csv'
 # reviews_path = '../Clean_Data/Final_cleaned_goodreads_reviews.csv'
 
+
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]{
+background-image: url("https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-size: cover;
+text-shadow: 2px 2px 8px #FF0000;
+}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 BASE = Path(__file__).parent  # folder where app.py lives
 data_dir = BASE / "Clean_Data"
 works_path = data_dir / "cleaned_goodreads_works.csv"
@@ -36,55 +49,6 @@ else:
 # Streamlit background colour
 import streamlit as st
 
-import streamlit as st
-
-css_global = """
-<style>
-.stApp {
-  background-image: linear-gradient(to bottom right, #010101, #393836);
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-}
-.stButton {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.stButton:hover {
-  background-color: #45a049;
-}
-.stElementContainer {
-  margin: 10px 0;
-  color: bisque;
-}
-
-[data-testid="stHeader"], [data-testid="stToolbar"] {
-  background: rgba(0,0,0,0);
-}
-
-</style>
-"""
-st.markdown(css_global, unsafe_allow_html=True)
-
-# css_container = """
-# <style>
-# .st-key-my_blue_container {
-#   background-color: rgba(100, 100, 255, 0.2);
-#   padding: 1rem;
-#   border-radius: 8px;
-# }
-# </style>
-# """
-# st.markdown(css_container, unsafe_allow_html=True)
-
-# with st.container(key="my_blue_container"):
-#     st.write("This container has custom styling")
-
-
 
 #------ Cleaning the Genre # column and preparing the dataset for visualization ----
 #Clean the Genres column
@@ -101,7 +65,7 @@ works = works.dropna(subset=['original_title', 'author'])
 # Remove duplicates based on 'original_title' and 'author'
 works = works.drop_duplicates(subset=['original_title', 'author'])
 # Display the first few rows of the dataset
-st.subheader("Dataset Overview")
+st.subheader("Maven Dashboard Bookshelf Challenge July 2025")
 
 #--Genres selection and Recommendation ----------------------
 #- Create a selectbox for genre selection

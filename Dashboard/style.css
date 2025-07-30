@@ -1,6 +1,8 @@
 /* style.css */
 .stApp {
   background-color: #f0f0f0;
+  background-image: "pexels-photo-1.jpg";
+  background-image: linear-gradient(to bottom right, #8e725f, #978562);
   color: #333;
   font-family: Arial, sans-serif;
   padding: 20px;
